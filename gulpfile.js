@@ -68,4 +68,4 @@ gulp.task('images', function() {
 });
 
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'html', 'scripts', 'fonts', 'icons',  'images'));
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'html', 'scripts', 'fonts', 'icons',  'images', 'deploy'));
