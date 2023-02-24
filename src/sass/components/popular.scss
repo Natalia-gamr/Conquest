@@ -101,7 +101,7 @@
             }
             a {
                 left: 40px;
-                &::before {
+                &:before {
                     left: -40px;
                 }
             }
@@ -111,13 +111,12 @@
 @media (max-width:480px) {
     .popular {
         &__item {
-            padding: 20px 0px;
             img {
                 width: 80%;
             }
             a {
                 left: 30px;
-                &::before {
+                &:before {
                     left: -30px;
                     width: 18px;
                 }
