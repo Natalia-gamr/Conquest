@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #1B1A17;
+}
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    position: relative;
+}
+h1 {
+    font-family: 'Playfair Display';
+    font-size: 45px;
+    line-height: 60px;
+}
+h2 {
+    font-family: 'Playfair Display';
+    font-size: 32px;
+    line-height: 43px;
+
+}
+h3 {
+    font-family: 'Playfair Display';
+    font-size: 30px;
+    line-height: 40px;
+}
+@media (max-width:1024px) {
+    .container {
+        max-width: 90%;
+    }
+}
+@media (max-width:768px) {
+    * {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 30px;
+        line-height: 45px;
+    }
+    h2 {
+        font-size: 21px;
+        line-height: 32px;
+
+    }
+    h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+@media (max-width:480px) {
+    * {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 20px;
+        line-height: 35px;
+    }
+    h2 {
+        font-size: 18px;
+        line-height: 24px;
+
+    }
+    h3 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
