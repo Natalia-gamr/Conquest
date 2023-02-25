@@ -18,25 +18,25 @@ let vw = document.documentElement.clientWidth;
 
 
 slide[0].style.display = 'flex';
-// left.style.display = 'none';
+left.disabled = true;
 
 right.addEventListener('click', moveLeft);
 function moveLeft(){
-    // left.style.display = 'block';
+    left.disabled = false;
     slide[index].style.display = 'none'; // Скрываем текущий слайд
     slide[++index].style.display = 'flex'; // Инкрементируем индекс и показываем следующий слайд
     if (index === slide.length - 1) { // Убираем "правую" стрелку, если справа слайдов больше нет
-    // right.style.display = 'none';
+    right.disabled = true;
     }
 }
 
 //Аналогично, только для левой стрелки
 left.addEventListener('click', moveRight);
 function moveRight(){
-    // right.style.display = 'block';
+    right.disabled = false;
     slide[index].style.display = 'none';
     slide[--index].style.display = 'flex';
     if (index === 0) {
-    // left.style.display = 'none';
+    left.disabled = true;
     }
 }
