@@ -23,16 +23,15 @@ currentSlide.textContent = `01`;
 right.addEventListener('click', moveLeft);
 function moveLeft(){
     left.disabled = false;
-    slide[index].style.display = 'none'; // Скрываем текущий слайд
+    slide[index].style.display = 'none'; 
     slide[++index].style.display = 'flex';
-     // Инкрементируем индекс и показываем следующий слайд
-    if (index === slide.length - 1) { // Убираем "правую" стрелку, если справа слайдов больше нет
+    if (index === slide.length - 1) { 
         right.disabled = true;
     }
     currentSlide.textContent = `02`;
 }
 
-//Аналогично, только для левой стрелки
+
 left.addEventListener('click', moveRight);
 function moveRight(){
     right.disabled = false;
