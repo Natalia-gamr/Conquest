@@ -29,7 +29,7 @@ function moveLeft(){
     if (index === slide.length - 1) { // Убираем "правую" стрелку, если справа слайдов больше нет
         right.disabled = true;
     }
-    currentSlide.textContent = `01`;
+    currentSlide.textContent = `02`;
 }
 
 //Аналогично, только для левой стрелки
@@ -41,5 +41,5 @@ function moveRight(){
     if (index === 0) {
     left.disabled = true;
     }
-    currentSlide.textContent = `02`;
+    currentSlide.textContent = `01`;
 }
