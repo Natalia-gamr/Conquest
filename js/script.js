@@ -1,6 +1,10 @@
-function toggleMenu() {
-    let menu = document.querySelector('.header__mobile')
-    let display = menu.style.display;
-    display == 'none' ? display = 'block' : display = 'none'; 
+
+let menu = document.querySelector('.header__mobile');
+
+function openMenu() {
+    menu.style.display = 'block';
+}
+function closeMenu() {
+    menu.style.display = 'none';
 }
       
