@@ -14,18 +14,18 @@ let slide = document.querySelectorAll('.features__slide');
 let index = 0;
 let left = document.querySelector('.features__left');
 let right = document.querySelector('.features__right');
-let currentSlide = document.querySelector('.features__index').textContent;
+let currentSlide = document.querySelector('.features__index');
 
 slide[0].style.display = 'flex';
 left.disabled = true;
-currentSlide = `0${index + 1}`;
+currentSlide.textContent = `0${index + 1}`;
 
 right.addEventListener('click', moveLeft);
 function moveLeft(){
     left.disabled = false;
     slide[index].style.display = 'none'; // Скрываем текущий слайд
     slide[++index].style.display = 'flex';
-    currentSlide = `0${index}`; // Инкрементируем индекс и показываем следующий слайд
+    currentSlide.textContent = `0${index}`; // Инкрементируем индекс и показываем следующий слайд
     if (index === slide.length - 1) { // Убираем "правую" стрелку, если справа слайдов больше нет
         right.disabled = true;
     }
@@ -37,7 +37,7 @@ function moveRight(){
     right.disabled = false;
     slide[index].style.display = 'none';
     slide[--index].style.display = 'flex';
-    currentSlide = `0${index}`;
+    currentSlide.textContent = `0${index}`;
     if (index === 0) {
     left.disabled = true;
     }
