@@ -81,7 +81,7 @@
             width: 390px;
         }
         &__descr {
-            max-width: 390px;
+            max-width: 95vw;
         }
         &__gallery {
             img:nth-child(2){
@@ -104,8 +104,9 @@
             grid-template-areas: 'a c';
             grid-template-rows: 1fr;
             align-items: center;
+            max-width: 95vw;
             img {
-                width: 95%;
+                width: 100%;
             }
         }
     }
