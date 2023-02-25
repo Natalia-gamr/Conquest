@@ -25,10 +25,11 @@ function moveLeft(){
     left.disabled = false;
     slide[index].style.display = 'none'; // Скрываем текущий слайд
     slide[++index].style.display = 'flex';
-    currentSlide.textContent = `0${index}`; // Инкрементируем индекс и показываем следующий слайд
+     // Инкрементируем индекс и показываем следующий слайд
     if (index === slide.length - 1) { // Убираем "правую" стрелку, если справа слайдов больше нет
         right.disabled = true;
     }
+    currentSlide.textContent = `0${++index}`;
 }
 
 //Аналогично, только для левой стрелки
@@ -37,8 +38,9 @@ function moveRight(){
     right.disabled = false;
     slide[index].style.display = 'none';
     slide[--index].style.display = 'flex';
-    currentSlide.textContent = `0${index}`;
+    
     if (index === 0) {
     left.disabled = true;
     }
+    currentSlide.textContent = `0${++index}`;
 }
