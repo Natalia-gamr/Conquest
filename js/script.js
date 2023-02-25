@@ -18,14 +18,14 @@ let currentSlide = document.querySelector('.features__index');
 
 slide[0].style.display = 'flex';
 left.disabled = true;
-currentSlide.append(`0${index + 1}`)
+currentSlide.append(`01`)
 
 right.addEventListener('click', moveLeft);
 function moveLeft(){
     left.disabled = false;
     slide[index].style.display = 'none'; // Скрываем текущий слайд
     slide[++index].style.display = 'flex';
-    currentSlide.append(`0${index + 1}`); // Инкрементируем индекс и показываем следующий слайд
+    currentSlide.remove().append(`0${index + 1}`); // Инкрементируем индекс и показываем следующий слайд
     if (index === slide.length - 1) { // Убираем "правую" стрелку, если справа слайдов больше нет
         right.disabled = true;
     }
