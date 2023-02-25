@@ -14,11 +14,11 @@ let slide = document.querySelectorAll('.features__slide');
 let index = 0;
 let left = document.querySelector('.features__left');
 let right = document.querySelector('.features__right');
-let vw = document.documentElement.clientWidth;
-
+let currentSlide = document.querySelector('.features__index');
 
 slide[0].style.display = 'flex';
 left.disabled = true;
+currentSlide.append(`0${index + 1}`)
 
 right.addEventListener('click', moveLeft);
 function moveLeft(){
