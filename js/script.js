@@ -14,7 +14,7 @@ let slide = document.querySelectorAll('.features__slide');
 let index = 0;
 let left = document.querySelector('.features__left');
 let right = document.querySelector('.features__right');
-let currentSlide = document.querySelector('.features__index').value;
+let currentSlide = document.querySelector('.features__index').children;
 
 slide[0].style.display = 'flex';
 left.disabled = true;
