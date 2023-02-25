@@ -18,7 +18,7 @@ let currentSlide = document.querySelector('.features__index');
 
 slide[0].style.display = 'flex';
 left.disabled = true;
-currentSlide.textContent = `0${index + 1}`;
+currentSlide.textContent = `01`;
 
 right.addEventListener('click', moveLeft);
 function moveLeft(){
@@ -29,7 +29,7 @@ function moveLeft(){
     if (index === slide.length - 1) { // Убираем "правую" стрелку, если справа слайдов больше нет
         right.disabled = true;
     }
-    currentSlide.textContent = `0${++index}`;
+    currentSlide.textContent = `01`;
 }
 
 //Аналогично, только для левой стрелки
@@ -38,9 +38,8 @@ function moveRight(){
     right.disabled = false;
     slide[index].style.display = 'none';
     slide[--index].style.display = 'flex';
-    
     if (index === 0) {
     left.disabled = true;
     }
-    currentSlide.textContent = `0${--index}`;
+    currentSlide.textContent = `02`;
 }
