@@ -42,5 +42,5 @@ function moveRight(){
     if (index === 0) {
     left.disabled = true;
     }
-    currentSlide.textContent = `0${++index}`;
+    currentSlide.textContent = `0${--index}`;
 }
